@@ -13,7 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="60sp" />
+        app:layout_constraintGuide_percent="0.08"
+        />
 
     <Button
         android:id="@+id/create_account_back_button"
@@ -26,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/white"
         android:text="Create an account"
-        android:textSize="22sp"
+        android:textSize="16sp"
         android:fontFamily="@font/museosans500"
         android:textAllCaps="false"
         android:drawableLeft="@drawable/ic_round_arrow_back_ios_24"
@@ -47,38 +48,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="45sp" />
+        app:layout_constraintGuide_percent="0.1"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="320dp" />
-
+        app:layout_constraintGuide_percent="0.9"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="540sp" />
+        app:layout_constraintGuide_percent="0.85"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_bottom_guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="590sp" />
+        app:layout_constraintGuide_percent="0.95"
+
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/password_criteria_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="435dp" />
+        app:layout_constraintGuide_percent="0.70"
+        />
 
     <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -89,43 +96,43 @@
         app:layout_constraintEnd_toStartOf="@id/end_guideline2"
         >
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email address"
             android:textColor="@color/white"
             android:fontFamily="@font/museosans500"
-            android:textSize="22sp"
-            android:layout_marginBottom="5sp"
+            android:textSize="15sp"
             />
 
         <EditText
             android:id="@+id/email_address_text"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="30sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
-            android:layout_marginBottom="15sp"
+            android:layout_marginBottom="5sp"
             android:fontFamily="@font/museosans300"
             android:inputType="textEmailAddress"
             android:background="@color/white"
-            android:padding="10sp"
+            android:padding="5sp"
             />
 
         <TextView
             android:id="@+id/email_error"
             android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="30sp"
             android:background="@drawable/thin_highlight"
             android:drawableLeft="@drawable/error_cross"
             android:drawablePadding="10sp"
             android:fontFamily="@font/museosans300"
-            android:padding="10sp"
+
+            android:padding="5sp"
             android:layout_marginBottom="5sp"
             android:text="Please enter a valid email address"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="13sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -133,7 +140,7 @@
             android:text="Create password"
             android:textColor="@color/white"
             android:fontFamily="@font/museosans500"
-            android:textSize="22sp"
+            android:textSize="15sp"
             android:layout_marginBottom="5sp"
 
             />
@@ -141,14 +148,15 @@
         <EditText
             android:id="@+id/password1_text"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="30sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
             android:background="@color/white"
             android:hint="See criteria below"
-            android:layout_marginBottom="15sp"
+            android:layout_marginBottom="5sp"
             android:fontFamily="@font/museosans300"
             android:inputType="textPassword"
-            android:padding="10sp"
+            android:padding="5sp"
             />
 
         <TextView
@@ -157,7 +165,7 @@
             android:text="Repeat password"
             android:textColor="@color/white"
             android:fontFamily="@font/museosans500"
-            android:textSize="22sp"
+            android:textSize="15sp"
             android:layout_marginBottom="5sp"
 
             />
@@ -165,13 +173,14 @@
         <EditText
             android:id="@+id/password2_text"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="30sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
             android:background="@color/white"
-            android:layout_marginBottom="15sp"
+            android:layout_marginBottom="5sp"
             android:fontFamily="@font/museosans300"
             android:inputType="textPassword"
-            android:padding="10sp"
+            android:padding="5sp"
 
             />
 
@@ -179,31 +188,29 @@
             android:id="@+id/password_error"
             android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="60sp"
+            android:layout_height="40sp"
             android:background="@drawable/thin_highlight"
             android:drawableLeft="@drawable/error_cross"
             android:drawablePadding="10sp"
             android:layout_marginBottom="0sp"
             android:fontFamily="@font/museosans300"
-            android:padding="10sp"
+            android:padding="5sp"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:text="Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter.  You can use special characters."
+            android:textColor="@color/white"
+            android:fontFamily="@font/museosans300"
+            android:textSize="13sp"
+            />
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter.  You can use special characters."
-        android:textColor="@color/white"
-        android:fontFamily="@font/museosans300"
-        android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="@id/password_criteria_guideline"
-        app:layout_constraintBottom_toTopOf="@id/button_bottom_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline2"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline2"
-        />
+
 
     <androidx.appcompat.widget.AppCompatButton
     android:id="@+id/next_button"
