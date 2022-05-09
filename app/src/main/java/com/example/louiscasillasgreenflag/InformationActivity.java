@@ -75,6 +75,7 @@ public class InformationActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 email_changed();
+                validate_next_button();
             }
         });
 
